@@ -14,7 +14,7 @@ const App = () => {
     return (
         <AppProvider>
             <div className='container'>
-                <h1 className='mt-3'>Company's Budget Allocation</h1>
+                <h1 className='mt-3'>Final Project Allocation</h1>
                 <div className='row mt-3'>
                     {/* Add Budget component here under */}        
                     <div className='col-sm'>
@@ -49,7 +49,6 @@ const App = () => {
                         <AllocationForm/>
                     </div>
                 </div>
-
             </div>
         </AppProvider>
     );
