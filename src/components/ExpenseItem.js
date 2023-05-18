@@ -1,9 +1,7 @@
 
 
 import React, { useContext } from 'react';
-import { TiDelete, FcDeleteRow } from 'react-icons/ti';
 import { AppContext } from '../context/AppContext';
-
 
 
 
@@ -51,7 +49,6 @@ const ExpenseItem = (props) => {
             </td>
             <td className='all-btns'>
                 <button className='inde_btns-delete' onClick={handleDeleteExpense} > x </button>
-                {/* <TiDelete className='inde_btns'  onClick={handleDeleteExpense}></TiDelete> */}
             </td>
         </tr>
     );

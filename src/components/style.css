@@ -42,6 +42,141 @@
 .custom-select {
     outline: none;
     border-left: none;
+    border: none;
+    background-color: rgb(209, 93, 106);
+    color: white;
+    font-weight: 500;
     border-top-right-radius: 4px !important;
     border-bottom-right-radius: 4px !important;
+    width: 150px;
+    padding-left: 5px;
+}
+
+.curr_select {
+    background-color: rgb(226, 227, 229);
+    border: none;
+    outline: none;
+} 
+
+
+
+/* AllocationForm-------- */
+
+.allocation-form {
+    border: 1px solid red;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+    width: 100%;
+    padding: 0;
+    margin: 0 0 50px 0;
+}
+.allocation-form2 {
+    border: 1px solid rgb(34, 32, 32);
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+.allocation-form3 {
+    width: 100%;
+    display: flex;
+    gap: 30px;
+    padding: 0;
+    margin: 0;
+    transition: all 0.3s ease;
+}
+.departament-div {
+    display: flex;
+    border: 1px solid blue;
+}
+.action-div {
+    display: flex;
+    border: 1px solid red;
+}
+.submit-div {
+    display: flex;
+    border: 1px solid black;
+}
+.add-cost-budget {
+    border-radius: 4px;
+    outline: none;
+    border: 1px solid rgb(206, 209, 212);
+    padding: 0 5px;
+    width: 205px;
+    max-width: 100%;
+    transition: all 0.3s ease;
+}
+.custom-select {
+    transition: all 0.3s ease;
+}
+
+
+@media (max-width: 991px) {
+    .allocation-form3 {
+        display: flex;
+        flex-direction: column;
+    }
+    .input-group-text {
+        width: 200px;
+        display: flex;
+        justify-content: center;
+        transition: all 0.3s ease;
+    }
+    .input-group-text_1 {
+        width: 100%;
+    }
+    .custom-select {
+        width: 100%;
+    }
+    .add-cost-budget{
+        width: 100%;
+    }
+    .submit-div .btn {
+        padding: 0 50px;
+    }
+}
+@media (max-width: 540px) {
+    .add-cost-budget {
+        border-radius: 4px;
+        outline: none;
+        border: 1px solid rgb(206, 209, 212);
+        padding: 0 5px;
+        width: 100%;
+    }
+    .custom-select {
+        width: 100%;
+    }
+    .input-group-text {
+        width: 120px;
+        display: flex;
+        justify-content: center;
+    }
+    .input-group-text_1 {
+        width: 100%;
+    }
+}
+@media (max-width: 450px) {
+    .submit-div .btn {
+        padding: 0 25px;
+    }
+}
+
+
+
+/* Budget-------------------------- */
+.budget-div {
+    justify-content: space-between;
+}
+.alert-secondary {
+    display: flex;
+}
+.alert-secondary .div1 {
+    display: flex;
+}
+.total_budget {
+    outline: none;
+    border: none;
+    width: 100%;
+    padding: 0 5px;
+    background-color: transparent;
 }

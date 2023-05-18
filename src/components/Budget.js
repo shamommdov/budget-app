@@ -2,41 +2,45 @@
 
 import React, { useContext, useState } from 'react';
 import { AppContext } from '../context/AppContext';
-import Remaining from './Remaining';
+import './style.css'
 
 
 const Budget = () => {
-
-    const { expenses, budget, Currency } = useContext(AppContext);
+    const { expenses, budget, Currency, dispatch } = useContext(AppContext);
     const [totalBudget, setTotalBudget] = useState(budget);
     
     const totalExpenses = expenses.reduce((total, item) => {
         return (total = total + item.cost);
     }, 0);
 
-    const remainingBalance = budget - totalExpenses
-    const [newRemainBalance, setNewRemainBalance] = useState(remainingBalance)
-    console.log("Budget K remain b: " + newRemainBalance)
     
     const handeBudget = (e) => {
-        const value = Number(e.target.value)
-        setTotalBudget(value)
-        setNewRemainBalance(value - totalExpenses)
+        setTotalBudget(e)
+        dispatch({
+            type: 'SET_BUDGET',
+            payload: e
+        });
     }
 
 
     return (
-        <div className='alert alert-secondary'>
-            <span>Budget: {Currency} {budget}</span>
-            <input
-                type='number'
-                id='cost'
-                value={totalBudget}
-                style={{ marginLeft: '2rem' , size: 10}}
-                min={totalExpenses}
-                max={20000}
-                onChange={handeBudget}>
-            </input>
+        <div className='alert alert-secondary budget-div'>
+            <div className='div1'>
+                Budget: {Currency}
+            </div>
+            <div className='div2'>
+                <input
+                    type='number'
+                    id='cost'
+                    step='10'
+                    value={totalBudget}
+                    style={{ marginLeft: '1rem' , size: 10}}
+                    min={totalExpenses}
+                    max={20000}
+                    onChange={(e) => handeBudget(parseInt(e.target.value))}
+                    className='total_budget'>
+                </input>
+            </div>
         </div>
     );
 };
