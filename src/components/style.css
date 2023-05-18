@@ -63,7 +63,6 @@
 /* AllocationForm-------- */
 
 .allocation-form {
-    border: 1px solid red;
     display: flex;
     justify-content: center;
     margin-bottom: 50px;
@@ -72,7 +71,6 @@
     margin: 0 0 50px 0;
 }
 .allocation-form2 {
-    border: 1px solid rgb(34, 32, 32);
     width: 100%;
     padding: 0;
     margin: 0;
@@ -87,15 +85,12 @@
 }
 .departament-div {
     display: flex;
-    border: 1px solid blue;
 }
 .action-div {
     display: flex;
-    border: 1px solid red;
 }
 .submit-div {
     display: flex;
-    border: 1px solid black;
 }
 .add-cost-budget {
     border-radius: 4px;
@@ -104,9 +99,6 @@
     padding: 0 5px;
     width: 205px;
     max-width: 100%;
-    transition: all 0.3s ease;
-}
-.custom-select {
     transition: all 0.3s ease;
 }
 
@@ -139,7 +131,6 @@
     .add-cost-budget {
         border-radius: 4px;
         outline: none;
-        border: 1px solid rgb(206, 209, 212);
         padding: 0 5px;
         width: 100%;
     }
