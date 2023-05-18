@@ -8,14 +8,12 @@ import './style.css'
 
 const AllocationForm = (props) => {
     const { dispatch, remaining, Currency } = useContext(AppContext);
-
     const [name, setName] = useState('');
     const [cost, setCost] = useState('');
     const [action, setAction] = useState('');
 
 
     const submitEvent = (e) => {
-
         if(cost > remaining) {
             alert("The value cannot exceed remaining funds  £ " + remaining);
             setCost("");

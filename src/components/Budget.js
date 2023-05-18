@@ -13,7 +13,6 @@ const Budget = () => {
         return (total = total + item.cost);
     }, 0);
 
-    
     const handeBudget = (e) => {
         setTotalBudget(e)
         dispatch({
