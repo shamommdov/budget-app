@@ -9,18 +9,18 @@ export const AppReducer = (state, action) => {
             let total_budget = 0;
             total_budget = state.expenses.reduce(
                 (previousExp, currentExp) => {
-                    return previousExp + currentExp.cost
+                    return Number(previousExp + currentExp.cost)
                 },0
             );
-            total_budget = total_budget + action.payload.cost;
+            total_budget = Number(total_budget + action.payload.cost);
             action.type = "DONE";
             if(total_budget <= state.budget) {
                 total_budget = 0;
                 state.expenses.map((currentExp)=> {
                     if(currentExp.name === action.payload.name) {
-                        currentExp.cost = action.payload.cost + currentExp.cost;
+                        currentExp.cost = Number(action.payload.cost + currentExp.cost);
                     }
-                    return currentExp
+                    return Number(currentExp)
                 });
                 return {
                     ...state,
@@ -34,8 +34,8 @@ export const AppReducer = (state, action) => {
         case 'RED_EXPENSE':
             const red_expenses = state.expenses.map((currentExp)=> {
                 if (currentExp.name === action.payload.name && currentExp.cost - action.payload.cost >= 0) {
-                    currentExp.cost =  currentExp.cost - action.payload.cost;
-                    budget = state.budget + action.payload.cost
+                    currentExp.cost =  Number(currentExp.cost - action.payload.cost)
+                    budget = Number(state.budget + action.payload.cost)
                 }
                 return currentExp
             })
@@ -51,7 +51,7 @@ export const AppReducer = (state, action) => {
                     budget = Number(state.budget + currentExp.cost)
                     currentExp.cost =  0;
                 }
-                return currentExp
+                return Number(currentExp)
             })
             action.type = "DONE";
             return {
@@ -60,13 +60,13 @@ export const AppReducer = (state, action) => {
             };
         case 'SET_BUDGET':
             action.type = "DONE";
-            state.budget = action.payload;
+            state.budget = Number(action.payload);
             return {
                 ...state,
             };
         case 'CHG_CURRENCY':
             action.type = "DONE";
-            state.Currency = action.payload;
+            state.Currency = Number(action.payload);
             return {
                 ...state
             }
