@@ -10,7 +10,7 @@ const Remaining = (props) => {
     const { expenses, budget, Currency } = useContext(AppContext);
     
     const totalExpenses = expenses.reduce((total, item) => {
-        return (total = parseInt(total + item.cost));
+        return (total = Number(total + item.cost));
     }, 0);
     const alertType = totalExpenses > budget ? 'alert-danger' : 'alert-success';
 
@@ -19,7 +19,7 @@ const Remaining = (props) => {
     
     return (
         <div className={`alert ${alertType}`}>
-            <span>Remaining: {Currency} {parseInt(budget - totalExpenses)} </span>
+            <span>Remaining: {Currency} {Number(budget - totalExpenses)} </span>
         </div>
     );
 };
