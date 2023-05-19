@@ -8,7 +8,7 @@ import { AppContext } from '../context/AppContext';
 const Remaining = (props) => {
 
     const { expenses, budget, Currency } = useContext(AppContext);
-    const [total, setTotal] = useState(budget)
+    const [ totalBudget ] = useState(budget)
    
     const totalExpenses = expenses.reduce((total, item) => {
         return (total = Number(total + item.cost));
@@ -16,11 +16,9 @@ const Remaining = (props) => {
     const alertType = totalExpenses > budget ? 'alert-danger' : 'alert-success';
 
 
-
-    
     return (
         <div className={`alert ${alertType}`}>
-            <span>Remaining: {Currency} {Number(total - totalExpenses)} </span>
+            <span>Remaining: {Currency} {Number(totalBudget - totalExpenses)} </span>
         </div>
     );
 };
