@@ -50,7 +50,7 @@ const AllocationForm = (props) => {
                 <div className="allocation-form3">
                     <div className="departament-div">
                         <div>
-                            <label className="input-group-text menu-names" htmlFor="inputGroupSelect01">Department</label>
+                            <label className="input-group-text" htmlFor="inputGroupSelect01">Department</label>
                         </div>
                         <select 
                             className="custom-select" 

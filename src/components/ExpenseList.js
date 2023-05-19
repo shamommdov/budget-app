@@ -21,9 +21,9 @@ const ExpenseList = () => {
               <th scope="col" className='all-btns menu-names'>Clear the Budget</th>
             </tr>
           </thead>
-          <tbody>
+          <tbody  className="dep-name">
             {expenses.map((expense) => (
-                <ExpenseItem id={expense.id} key={expense.id} name={expense.name} cost={expense.cost} />
+                  <ExpenseItem id={expense.id} key={expense.id} name={expense.name} cost={expense.cost} />
             ))}
           </tbody>
       </table>
