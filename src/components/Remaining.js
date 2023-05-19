@@ -12,7 +12,7 @@ const Remaining = (props) => {
     const totalExpenses = expenses.reduce((total, item) => {
         return (total = parseInt(total + item.cost));
     }, 0);
-    const alertType = totalExpenses > budget ? 'alert-danger' : 'alert-success';
+    //const alertType = totalExpenses > budget ? 'alert-danger' : 'alert-success';
 
 
 
