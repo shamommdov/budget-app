@@ -8,32 +8,34 @@ import ExpenseTotal from './components/ExpenseTotal'
 import ExpenseList from './components/ExpenseList';
 import AllocationForm from './components/AllocationForm';
 import Currency from './components/Currency';
-
 import { AppProvider } from './context/AppContext';
+
+
 
 const App = () => {
     return (
         <AppProvider>
             <div className='container'>
-                <h1 className='mt-3'>Budgeting Allocation Application</h1>
-                <div className='row mt-3'>
-                    {/* Add Budget component here under */}        
-                    <div className='col-sm'>
+                <h2 className='mb-3 header-text'>Budgeting Allocation Application</h2>
+                <div className='mt-3 header-side'>
+                    {/* Add Budget component here under col-sm */}         
+                    <div className='header-side_1'>
                         <Budget />
                     </div>
 
-                    {/* Add Remaining component here under */}        
-                    <div className='col-sm'>
-                        <Remaining />
-                    </div>
-
-                    {/* Add ExpenseTotal component here under */}        
-                    <div className='col-sm'>
-                        <ExpenseTotal />
-                    </div>
-
-                    <div className='col-sm'>
-                        <Currency />
+                    <div className="header-displey">
+                    {/* Add Remaining component here under */}        
+                        <div className='header-side_2'>
+                            <Remaining />
+                        </div>
+                    {/* Add ExpenseTotal component here under */}        
+                        <div className='header-side_3'>
+                            <ExpenseTotal />
+                        </div>
+                    {/* Add Currency component here under */} 
+                        <div className='header-side_4'>
+                            <Currency />
+                        </div>
                     </div>
                 </div>
 

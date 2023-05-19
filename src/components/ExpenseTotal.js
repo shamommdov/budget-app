@@ -1,7 +1,9 @@
 
-
 import React, { useContext } from 'react';
 import { AppContext } from '../context/AppContext';
+import './style.css'
+
+
 const ExpenseTotal = () => {
     const { expenses, Currency } = useContext(AppContext);
     
@@ -11,8 +13,9 @@ const ExpenseTotal = () => {
 
 
     return (
-        <div className='alert alert-primary'>
-            <span>Spent so far: {Currency} {totalExpenses}</span>
+        <div className='alert alert-primary style-div'>
+            <span className='span1'>Spent so far: </span>
+            <span className='span2'>{Currency} {totalExpenses}</span>
         </div>
     );
 };

@@ -71,6 +71,8 @@
         height: 30px;
         width: 30px;
         padding-bottom: 3px;
+        font-weight: 500;
+        font-size: 12px;
     }
 }
 
@@ -172,23 +174,7 @@
 
 
 
-/* Budget-------------------------- */
-.budget-div {
-    justify-content: space-between;
-}
-.alert-secondary {
-    display: flex;
-}
-.alert-secondary .div1 {
-    display: flex;
-}
-.total_budget {
-    outline: none;
-    border: none;
-    width: 100%;
-    padding: 0 5px;
-    background-color: transparent;
-}
+
 
 
 /* Expense List */
@@ -205,5 +191,91 @@
 @media (max-width: 550px) {
     .dep-name {
         font-size: 12px;
+        font-weight: 500;
+    }
+}
+
+
+/* Budget-------------------------- */
+.budget-div {
+    justify-content: space-between;
+    display: flex;
+    margin: 0 !important;
+    box-sizing: border-box;
+}
+.budget-div .div2 {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+}
+.total_budget {
+    outline: none;
+    border: none;
+    height: 100%;
+    width: 100%;
+    margin: 0 0 0 5px !important;
+    padding: 3px 5px;
+    border-radius: 4px;
+    box-sizing: border-box !important;
+    font-weight: 600;
+    display: flex;
+}
+
+/* Remaining----------- */
+
+.style-div {
+    display: flex;
+    justify-content: space-between; 
+}
+.style-div .span2 {
+    font-weight: 600;
+}
+
+/* App ------------------- */
+.header-text {
+    margin: 30px 0 50px 0 !important;
+    line-height: 33px;
+}
+.header-side {
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0 !important;
+    transition: all 1s ease;
+    gap: 5px;
+}
+.header-displey {
+    display: flex;
+    gap: 5px;
+    flex: 70%;
+    transition: all 0.3s ease;
+    margin: 0 !important;
+    padding: 0;
+}
+.header-side_1 {
+    flex: 30%;
+    padding: 0;
+    margin: 0 0 15px 0 !important;
+}
+.header-side div {
+    width: 100%;
+}
+
+@media (max-width: 992px) {
+    .header-side {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+    }
+}
+@media (max-width: 575px) {
+    .header-displey {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        margin: 0 !important;
     }
 }
