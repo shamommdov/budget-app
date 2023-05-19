@@ -33,6 +33,8 @@ const AllocationForm = (props) => {
             expenses.map((e) => {
                 if(e.name === expense.name && e.cost === 0) {
                     alert(`The expenses  of the ${e.name} department is 0 (ziro)`)
+                }else if(e.name === expense.name && e.cost < cost){
+                    alert(`The total of expenses of ${e.name} is less than the cost entered`)
                 }
             })
         } else {
