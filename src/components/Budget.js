@@ -36,7 +36,7 @@ const Budget = () => {
                     style={{ marginLeft: '1rem' , size: 10}}
                     min={totalExpenses}
                     max={20000}
-                    onChange={(e) => handeBudget(parseInt(e.target.value))}
+                    onChange={(e) => handeBudget(e.target.value)}
                     className='total_budget'>
                 </input>
             </div>
