@@ -7,10 +7,17 @@ import './style.css'
 
 
 const AllocationForm = (props) => {
-    const { dispatch, remaining, Currency } = useContext(AppContext);
+    const { dispatch, remaining, Currency, expenses } = useContext(AppContext);
     const [name, setName] = useState('');
     const [cost, setCost] = useState('');
     const [action, setAction] = useState('');
+
+
+    expenses.map((e) => {
+        //console.log(e.name)
+        //console.log(name)
+    })
+
 
 
     const submitEvent = (e) => {
@@ -19,16 +26,22 @@ const AllocationForm = (props) => {
             setCost("");
             return;
         }
-
+        
         const expense = {
             name: name,
             cost: parseInt(cost),
         };
+        
         if(action === "Reduce") {
             dispatch({
                 type: 'RED_EXPENSE',
                 payload: expense,
             });
+            expenses.map((e) => {
+                if(e.name === expense.name && e.cost === 0) {
+                    alert(`The expenses  of the ${e.name} department is 0`)
+                }
+            })
         } else {
             dispatch({
                 type: 'ADD_EXPENSE',
@@ -37,7 +50,6 @@ const AllocationForm = (props) => {
         }
     };
 
-    
     
     return (
         <div className='allocation-form'>
@@ -56,7 +68,7 @@ const AllocationForm = (props) => {
                             <option value="Marketing" name="marketing"> Marketing</option>
                             <option value="Sales" name="sales">Sales</option>
                             <option value="Finance" name="finance">Finance</option>
-                            <option value="HR" name="hr">HR</option>
+                            <option value="Human Resource" name="Human Resource">HR</option>
                             <option value="IT" name="it">IT</option>
                             <option value="Admin" name="admin">Admin</option>
                         </select>
