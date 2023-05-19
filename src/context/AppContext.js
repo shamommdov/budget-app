@@ -48,7 +48,7 @@ export const AppReducer = (state, action) => {
             action.type = "DONE";
             state.expenses.map((currentExp)=> {
                 if (currentExp.name === action.payload) {
-                    budget = state.budget + currentExp.cost
+                    budget = Number(state.budget + currentExp.cost)
                     currentExp.cost =  0;
                 }
                 return currentExp

@@ -7,7 +7,8 @@ import './style.css'
 const Remaining = (props) => {
 
     const { expenses, budget, Currency } = useContext(AppContext);
-    const total_Balance = Number(budget)
+    const [allBudget, setAllBudget ] = useState(budget)
+    //const total_Balance = Number(budget)
     
    
     const totalExpenses = expenses.reduce((total, item) => {
@@ -19,7 +20,7 @@ const Remaining = (props) => {
     return (
         <div className={`alert ${alertType} style-div`}>
             <span className='span1'> Remaining: </span>
-            <span className='span2'> {Currency} {Number(total_Balance - totalExpenses)} </span>
+            <span className='span2'> {Currency} {Number(budget - totalExpenses)} </span>
         </div>
     );
 };

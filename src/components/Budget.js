@@ -1,5 +1,4 @@
 
-
 import React, { useContext, useState } from 'react';
 import { AppContext } from '../context/AppContext';
 import './style.css'
@@ -7,15 +6,15 @@ import './style.css'
 
 const Budget = () => {
     const { expenses, budget, Currency, dispatch } = useContext(AppContext);
-    const [totalBudget, setTotalBudget] = useState(budget);
+    const [total, setTotal] = useState(Number(budget));
 
     
     const totalExpenses = expenses.reduce((total, item) => {
-        return (total = total + item.cost);
+        return Number(total = total + item.cost);
     }, 0);
 
     const handeBudget = (e) => {
-        setTotalBudget(e)
+        setTotal(e)
         dispatch({
             type: 'SET_BUDGET',
             payload: e
@@ -40,16 +39,16 @@ const Budget = () => {
                     type='number'
                     id='cost'
                     step='10'
-                    value={totalBudget}
+                    value={total}
                     min={totalExpenses}
                     max={20000}
-                    onChange={(e) => handeBudget(e.target.value)}
+                    onChange={(e) => handeBudget(Number(e.target.value))}
                     className='total_budget'>
                 </input>
             </div>
             {/* <div>
-                <button onClick={increaseValue}>Increase by 10</button>
-                <button onClick={decreaseValue}>Decrease by 10</button>
+                <button onClick={increaseValue}> + </button>
+                <button onClick={decreaseValue}> - </button>
             </div> */}
         </div>
     );
