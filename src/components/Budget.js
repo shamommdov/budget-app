@@ -14,7 +14,6 @@ const Budget = () => {
     }, 0);
 
     const handeBudget = (e) => {
-        setTotalBudget(e)
         dispatch({
             type: 'SET_BUDGET',
             payload: e

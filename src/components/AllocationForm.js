@@ -43,7 +43,7 @@ const AllocationForm = (props) => {
         <div className='allocation-form'>
             <div className='row allocation-form2'>
                 <div className="allocation-form3">
-                    <div class="departament-div">
+                    <div className="departament-div">
                         <div>
                             <label className="input-group-text" htmlFor="inputGroupSelect01">Department</label>
                         </div>
@@ -62,7 +62,7 @@ const AllocationForm = (props) => {
                         </select>
                     </div>
 
-                    <div class="action-div">
+                    <div className="action-div">
                         <div className="input-group-prepend" >
                             <label className="input-group-text" htmlFor="inputGroupSelect02">Allocation</label>
                         </div>
@@ -76,7 +76,7 @@ const AllocationForm = (props) => {
                         </select>
                     </div>
 
-                    <div class="submit-div">
+                    <div className="submit-div">
                         <div>
                             <label className="input-group-text input-group-text_1" htmlFor="inputGroupSelect01">{Currency}</label>
                         </div>
