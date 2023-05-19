@@ -2,7 +2,7 @@
 
 import React, { useContext } from 'react';
 import { AppContext } from '../context/AppContext';
-
+import './style.css'
 
 
 const ExpenseItem = (props) => {
@@ -37,21 +37,23 @@ const ExpenseItem = (props) => {
         });
     }
 
-    
+
     return (
-        <tr>
-            <td>{props.name}</td>
-            <td >{Currency} {props.cost}</td>
-            <td className='all-btns'>
-                <button className='inde_btns' onClick={event=> increaseAllocation(props.name)}> + </button>
-            </td>
-            <td className='all-btns'>
-                <button className='inde_btns' onClick={event=> decreaseAllocation(props.name)}> - </button>
-            </td>
-            <td className='all-btns'>
-                <button className='inde_btns-delete' onClick={handleDeleteExpense} > x </button>
-            </td>
-        </tr>
+
+            <tr className="expences-item">
+                <td>{props.name}</td>
+                <td >{Currency} {props.cost}</td>
+                <td className='all-btns'>
+                    <button className='inde_btns' onClick={event=> increaseAllocation(props.name)}> + </button>
+                </td>
+                <td className='all-btns'>
+                    <button className='inde_btns' onClick={event=> decreaseAllocation(props.name)}> - </button>
+                </td>
+                <td className='all-btns'>
+                    <button className='inde_btns-delete' onClick={handleDeleteExpense} > x </button>
+                </td>
+            </tr>
+
     );
 };
 

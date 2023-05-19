@@ -13,13 +13,6 @@ const AllocationForm = (props) => {
     const [action, setAction] = useState('');
 
 
-    expenses.map((e) => {
-        //console.log(e.name)
-        //console.log(name)
-    })
-
-
-
     const submitEvent = (e) => {
         if(cost > remaining) {
             alert("The value cannot exceed remaining funds  £ " + remaining);
@@ -39,7 +32,7 @@ const AllocationForm = (props) => {
             });
             expenses.map((e) => {
                 if(e.name === expense.name && e.cost === 0) {
-                    alert(`The expenses  of the ${e.name} department is 0`)
+                    alert(`The expenses  of the ${e.name} department is 0 (ziro)`)
                 }
             })
         } else {
@@ -57,7 +50,7 @@ const AllocationForm = (props) => {
                 <div className="allocation-form3">
                     <div className="departament-div">
                         <div>
-                            <label className="input-group-text" htmlFor="inputGroupSelect01">Department</label>
+                            <label className="input-group-text menu-names" htmlFor="inputGroupSelect01">Department</label>
                         </div>
                         <select 
                             className="custom-select" 

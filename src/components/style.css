@@ -6,9 +6,9 @@
     align-items: center; 
 }
 
-.all-btns {
-    text-align: center;
-}
+
+/* Expence Item-------------------------- */
+
 .inde_btns {
     outline: none;
     border: none;
@@ -57,6 +57,24 @@
     border: none;
     outline: none;
 } 
+
+@media (max-width: 550px) {
+    .menu-names {
+        font-size: 12px !important;
+    }
+    .inde_btns {
+        height: 30px;
+        width: 30px;
+        padding-bottom: 3px;
+    }
+    .inde_btns-delete {
+        height: 30px;
+        width: 30px;
+        padding-bottom: 3px;
+    }
+}
+
+
 
 
 
@@ -170,4 +188,16 @@
     width: 100%;
     padding: 0 5px;
     background-color: transparent;
+}
+
+
+/* Expense List */
+
+.expences-item {
+    border: 1px solid red;
+    width: 100%;
+}
+
+.all-btns {
+    text-align: center;
 }
