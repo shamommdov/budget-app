@@ -18,8 +18,11 @@ const Remaining = (props) => {
 
     
     return (
-        <div className={`alert ${alertType}`}>
-            <span>Remaining: {Currency} {parseInt(budget - totalExpenses)} </span>
+        // <div className={`alert ${alertType}`}>
+        //     <span>Remaining: {Currency} {parseInt(budget - totalExpenses)} </span>
+        // </div>
+        <div>
+            Remaining: {Currency} {parseInt(budget - totalExpenses)}
         </div>
     );
 };
