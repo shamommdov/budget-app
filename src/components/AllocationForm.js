@@ -44,6 +44,8 @@ const AllocationForm = (props) => {
             });
         }
     };
+    
+    
 
     
     return (
@@ -61,9 +63,9 @@ const AllocationForm = (props) => {
                         >
                             <option defaultValue> Choose... </option>
                             <option value="Marketing" name="marketing"> Marketing</option>
-                            <option value="Sales" name="sales">Sales</option>
                             <option value="Finance" name="finance">Finance</option>
-                            <option value="Human Resource" name="Human Resource">HR</option>
+                            <option value="Sales" name="sales">Sales</option>
+                            <option value="Human Resource" name="Human Resource">Human Resource</option>
                             <option value="IT" name="it">IT</option>
                             <option value="Admin" name="admin">Admin</option>
                         </select>

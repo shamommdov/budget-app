@@ -37,7 +37,7 @@ export const AppReducer = (state, action) => {
                     currentExp.cost =  Number(currentExp.cost - action.payload.cost)
                     budget = Number(state.budget + action.payload.cost)
                 }
-                return currentExp
+                return Number(currentExp)
             })
             action.type = "DONE";
             return {
