@@ -6,18 +6,18 @@ import './style.css'
 
 const Budget = () => {
     const { expenses, budget, Currency, dispatch } = useContext(AppContext);
-    const [total, setTotal] = useState(Number(budget));
+    const [total_Budget, setTotal_Budget] = useState(Number(budget));
 
     
     const totalExpenses = expenses.reduce((total, item) => {
-        return Number(total = total + item.cost);
+        return total = Number(total + item.cost);
     }, 0);
 
-    const handeBudget = (e) => {
-        setTotal(e)
+    const handeBudget = (event) => {
+        setTotal_Budget(event)
         dispatch({
             type: 'SET_BUDGET',
-            payload: e
+            payload: event
         });
     }
     
@@ -39,7 +39,7 @@ const Budget = () => {
                     type='number'
                     id='cost'
                     step='10'
-                    value={total}
+                    value={total_Budget}
                     min={totalExpenses}
                     max={20000}
                     onChange={(e) => handeBudget(Number(e.target.value))}
