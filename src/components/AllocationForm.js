@@ -19,9 +19,6 @@ const AllocationForm = (props) => {
         //     setCost("");
         //     return;
         // }
-
-        console.log("cost: "+cost)
-        console.log("remain: "+remaining)
         
         const expense = {
             name: name,
