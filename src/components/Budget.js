@@ -7,12 +7,12 @@ import './style.css'
 const Budget = () => {
     const { expenses, budget, Currency, dispatch } = useContext(AppContext);
     const [total_Budget, setTotal_Budget] = useState(Number(budget));
-
     
+
     const totalExpenses = expenses.reduce((total, item) => {
         return total = Number(total + item.cost);
     }, 0);
-
+ 
     const handeBudget = (event) => {
         setTotal_Budget(event)
         dispatch({
@@ -20,15 +20,8 @@ const Budget = () => {
             payload: event
         });
     }
-    
-    // const increaseValue = () => {
-    //     Number(setTotalBudget(totalBudget + 10));
-    // };
-  
-    // const decreaseValue = () => {
-    //     Number(setTotalBudget(totalBudget + 10));
-    // };
-    
+
+
 
     return (
         <div className='alert alert-secondary budget-div'>
@@ -46,10 +39,6 @@ const Budget = () => {
                     className='total_budget'>
                 </input>
             </div>
-            {/* <div>
-                <button onClick={increaseValue}> + </button>
-                <button onClick={decreaseValue}> - </button>
-            </div> */}
         </div>
     );
 };

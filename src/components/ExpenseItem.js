@@ -6,7 +6,7 @@ import './style.css'
 
 
 const ExpenseItem = (props) => {
-    const { dispatch, Currency } = useContext(AppContext);
+    const { dispatch, Currency, expenses } = useContext(AppContext);
 
     const handleDeleteExpense = () => {
         dispatch({
@@ -35,11 +35,16 @@ const ExpenseItem = (props) => {
             type: 'RED_EXPENSE',
             payload: expense
         });
+        expenses.map((e) => {
+            if(e.name === expense.name && e.cost === 0) {
+                alert(`The expenses  of the ${e.name} department is 0 (ziro)`)
+            }
+        })
     }
 
 
-    return (
 
+    return (
             <tr className="expences-item">
                 <td>{props.name}</td>
                 <td >{Currency} {props.cost}</td>

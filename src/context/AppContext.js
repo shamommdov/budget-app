@@ -50,8 +50,7 @@ export const AppReducer = (state, action) => {
                 if (currentExp.name === action.payload) {
                     //budget = state.budget + currentExp.cost
                     budget = state.budget
-                    currentExp.cost =  Number(0);
-                    console.log(budget)
+                    currentExp.cost =  0;
                 }
                 //return currentExp
             })

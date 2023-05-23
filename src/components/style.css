@@ -1,9 +1,20 @@
 
+/* urrency---------- */
 
 .currency-div {
     font-size: 20px ; 
     display: flex ; 
     align-items: center; 
+}
+.curr_select {
+    border: none;
+    outline: none;
+    background-color: rgb(213, 233, 182);
+} 
+.currency-style {
+    background-color: rgb(213, 233, 182);
+    border: none;
+    outline: none;
 }
 
 
@@ -52,11 +63,6 @@
     padding-left: 5px;
 }
 
-.curr_select {
-    background-color: rgb(226, 227, 229);
-    border: none;
-    outline: none;
-} 
 
 @media (max-width: 550px) {
     .menu-names {
@@ -202,7 +208,7 @@
 .budget-div .div2 {
     box-sizing: border-box;
     padding: 0;
-    margin: 0;
+    margin: 0 !important;
     display: flex;
     align-items: center;
     font-weight: 600;
@@ -227,6 +233,7 @@
     display: flex;
     justify-content: space-between; 
 }
+
 .style-div .span2 {
     font-weight: 600;
 }
