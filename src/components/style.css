@@ -15,11 +15,23 @@
     background-color: rgb(213, 233, 182);
     border: none;
     outline: none;
+    padding: 16px 13px !important;
+}
+
+@media (min-width: 576px) and (max-width: 768px) {
+    .budget-div {
+        font-size: 15px;
+    }
+    .style-div {
+        font-size: 15px;
+    }
+    .currency-style {
+        font-size: 15px;
+    }
 }
 
 
 /* Expence Item-------------------------- */
-
 .inde_btns {
     outline: none;
     border: none;
@@ -200,32 +212,38 @@
 
 /* Budget-------------------------- */
 .budget-div {
-    justify-content: space-between;
     display: flex;
+    justify-content: space-between;
+    align-items: center;
     margin: 0 !important;
-    box-sizing: border-box;
+    box-sizing: border-box !important;
 }
 .budget-div .div2 {
-    box-sizing: border-box;
+    box-sizing: border-box !important;
     padding: 0;
     margin: 0 !important;
     display: flex;
     align-items: center;
-    font-weight: 600;
 }
 .total_budget {
     outline: none;
     border: none;
     height: 100%;
     width: 100%;
-    margin: 0 0 0 5px !important;
-    padding: 3px 8px;
+    max-height: 30px;
+    margin: 0 0 0 5px;
     border-radius: 4px;
-    box-sizing: border-box !important;
     font-weight: 600;
     display: flex;
     line-height: 0;
+    box-sizing: border-box !important;
+    padding: 5px 8px;
 }
+
+.alert-secondary {
+    padding: 13px;
+}
+    
 
 /* Remaining----------- */
 

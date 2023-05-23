@@ -22,7 +22,6 @@ const Budget = () => {
     }
 
 
-
     return (
         <div className='alert alert-secondary budget-div'>
             <div>Budget:</div>
